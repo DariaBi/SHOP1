@@ -1,0 +1,28 @@
+[warn] /home/daria/E-business/app/models/ProductRepository.scala:6:15: imported `CategoryRepository' is permanently hidden by definition of class CategoryRepository in package models
+[warn] import models.CategoryRepository
+[warn]               ^
+[warn] /home/daria/E-business/app/controllers/ActivateAccountController.scala:49:45: match may not be exhaustive.
+[warn] It would fail on the following input: Some(_)
+[warn]     userService.retrieve(loginInfo).flatMap {
+[warn]                                             ^
+[warn] /home/daria/E-business/app/controllers/ApplicationController.scala:51:49: match may not be exhaustive.
+[warn] It would fail on the following input: Failure(_)
+[warn]     userCustomRepo.getByEmail(email).onComplete({
+[warn]                                                 ^
+[warn] /home/daria/E-business/app/models/CartProductRepository.scala:38:12: match may not be exhaustive.
+[warn] It would fail on the following input: (_, _)
+[warn]       into { case (`cartId`, id) => CartProduct(id, productId, amount) }
+[warn]            ^
+[warn] /home/daria/E-business/app/models/CartRepository.scala:38:12: match may not be exhaustive.
+[warn] It would fail on the following input: (_, _)
+[warn]       into { case (`userId`, id) => Cart(id, userId) }
+[warn]            ^
+[warn] /home/daria/E-business/app/models/CategoryRepository.scala:66:12: match may not be exhaustive.
+[warn] It would fail on the following input: (_, _)
+[warn]       into {case (`name`, id) => Category(id, name) }
+[warn]            ^
+[warn] /home/daria/E-business/app/models/UserRepository.scala:55:12: Exhaustivity analysis reached max recursion depth, not all missing cases are reported.
+[warn] (Please try with scalac -Ypatmat-exhaust-depth 40 or -Ypatmat-exhaust-depth off.)
+[warn]       into { case ((`firstName`, `lastName`, `fullName`, `email`, `token`), id) => UserCustom(id, firstName, lastName, fullName, email, token) }
+[warn]            ^
+[warn] 7 warnings found
